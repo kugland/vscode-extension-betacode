@@ -71,11 +71,18 @@ const diacriticalPrecedence: Record<string, number> = {
 };
 
 /**
- * Reorder diacriticals or String.normalize to be able to compose
+ * Convert characters marked with asterisk to uppercase.
+ */
+function translateUppercase(text: string) {
+  return text.replace(/\*([A-Za-z])/g, (_, match: string) => match.toUpperCase());
+}
+
+/**
+ * Reorder diacriticals for String.normalize to be able to compose
  * combined characters whenever possible.
  */
-const normalizeDiacriticals = (text: string) => {
-  return text.replace(/([)(\\/=|_^+]{2,})/g, (match: string) => {
+function normalizeDiacriticals(text: string) {
+  return text.replace(/[)(\\/=|_^+]{2,}/g, function (match: string) {
     const normalized = match.split('')
       .sort((a, b) => diacriticalPrecedence[a] - diacriticalPrecedence[b])
       .join('');
@@ -88,10 +95,14 @@ const normalizeDiacriticals = (text: string) => {
  *
  * @param text   text being translated.
  */
-const translateBetaCode = (text: string) => {
+function translateBetaCode(text: string): string {
   let result = text;
+  // Convert ‘*a’ to ‘A’, '*b' to 'B' etc.
+  result = translateUppercase(result);
   // First reorder codes for diacriticals when needed.
-  result = normalizeDiacriticals(text);
+  result = normalizeDiacriticals(result);
+  // Substitute sigma for sigma final when needed.
+  result = result.replace(/s\b/g, 'j');
   // Then replace codes with Greek unicode characters.
   for (const [code, greek] of betaCodeReplaces) {
     result = result.split(code).join(greek);
