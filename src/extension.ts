@@ -1,4 +1,4 @@
-//  A plugin that allows typing polytonic Greek into VS Code.
+//  An extension that allows typing polytonic Greek into VS Code.
 //  Copyright (C) 2020  André Kugland
 //
 //  This program is free software: you can redistribute it and/or modify
