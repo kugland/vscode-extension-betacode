@@ -4,7 +4,7 @@
   "license": "GPL-3.0",
   "description": "Type polytonic Greek into VS Code.",
   "version": "0.1.1",
-  "publisher": "kugland",
+  "publisher": "capatech",
   "repository": {
     "type": "git",
     "url": "https://github.com/kugland/vscode-extension-betacode"
