@@ -13,23 +13,7 @@ Its syntax is based on [Beta Code][beta_code], but it differs from it in that:
 * Macron is ‘_’, breve is ‘^’ and diæresis is ‘+’.
 * ‘:’ becomes ‘·’.
 
-The full mapping can be clearly seen from the code:
-
-```
-latin = u'ABGDEVZHQIKLMNCOPRSJTUFXYW:abgdevzhqiklmncoprsjtufxyw'
-greek = u'ΑΒΓΔΕϜΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ·αβγδεϝζηθικλμνξοπρσςτυφχψω'
-accents = [
-  ('(' , u'\u0314'), # Spiritus lenis
-  (')' , u'\u0313'), # Spiritus asper
-  ('\\', u'\u0300'), # Grave accent
-  ('/' , u'\u0301'), # Acute accent
-  ('=' , u'\u0342'), # Circumflex accent
-  ('|' , u'\u0345'), # Iota subscript
-  ('+' , u'\u0308'), # Diæresis
-  ('_' , u'\u0304'), # Macron
-  ('^' , u'\u0306')  # Breve
-]
-```
+![BetaCode table](betacode.png)
 
 Example usage
 -------------

@@ -38,8 +38,8 @@ const betaCodeMap: Record<string, string> = {
   // Accents
   ')': '\u0313',  // psili (spiritus lenis)
   '(': '\u0314',  // dasia (spiritus asper)
-  '\\': '\u0300', // varia (grave accent)
   '/': '\u0301',  // oxia / tonos (acute accent)
+  '\\': '\u0300', // varia (grave accent)
   '=': '\u0342',  // perispomeni (circumflex)
   '|': '\u0345',  // ypogegrammeni (iota subscript)
   '+': '\u0308',  // dialytika (diaeresis)
