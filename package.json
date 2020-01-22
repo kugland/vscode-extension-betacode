@@ -2,8 +2,8 @@
   "name": "betacode",
   "displayName": "BetaCode",
   "license": "GPL-3.0",
-  "description": "An extension that allows typing polytonic Greek into VS Code.",
-  "version": "0.0.1",
+  "description": "Type polytonic Greek into VS Code.",
+  "version": "0.1.0",
   "publisher": "kugland",
   "repository": {
     "type": "git",

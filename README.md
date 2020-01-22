@@ -1,7 +1,7 @@
 VSCode-BetaCode
 ================
 
-A plugin that allows typing [polytonic Greek][polytonic] into [VS Code][vscode].
+Type [polytonic Greek][polytonic] into [VS Code][vscode].
 
 Character mapping
 -----------------
