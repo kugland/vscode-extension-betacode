@@ -6,19 +6,23 @@ Type [polytonic Greek][polytonic] into [VS Code][vscode].
 Character mapping
 -----------------
 
-Its syntax is based on [Beta Code][beta_code], but it differs from it in that:
-
-* Asterisk prefix is not needed for capitals, i.e. ‘d’ → ‘δ’, ‘D’ → ‘Δ’,
-  but using it is also supported.
-* Final sigmas are used automatically when fit, but ‘j’ is also mapped to final
-  sigma.
-* Macron is ‘_’, breve is ‘^’ and diæresis is ‘+’.
-* ‘:’ becomes ‘·’.
+The character mapping is based on [Beta Code][beta_code].
 
 ![BetaCode table](betacode.png)
 
-Example usage (Lord’s Prayer)
------------------------------
+But it differs from Beta Code in that:
+
+* Asterisk prefix is not needed for capitals: `d` → `δ`, `D` → `Δ`. Using asterisks, however, is also supported: `*d` → `Δ`.
+* Final sigmas are used automatically when fit: `su/nacis` → `σύναξις`. Final sigma (`ς`) can also be generated with `j`: `su/nacij` → `σύναξις`.
+* Macron is mapped to underscore: `a_` → `ᾱ`.
+* Vrachy (breve) is mapped to circumflex: `a^` → `ᾰ`.
+* Dialytika (diæresis) is mapped to plus sign: `i+` → `ϊ`.
+* Ano teleia (raised point) is mapped to colon: `:` → `·`.
+
+Example usage
+-------------
+
+[The Lord’s Prayer][lords_prayer]:
 
 ```
 Pa/ter h(mw=n o( e)n toi=s ou)ranoi=s:
@@ -50,8 +54,8 @@ Becomes:
 
 Credits & License
 -----------------
-VSCode-BetaCode is written by [André Kugland][kuglandml] and licensed
-under the [GPLv3][gplv3].
+VSCode-BetaCode is written by [André Kugland][kuglandml] and licensed under
+the [GPLv3][gplv3].
 
 [polytonic]: https://en.wikipedia.org/wiki/Greek_diacritics
 [vscode]: https://code.visualstudio.com/
