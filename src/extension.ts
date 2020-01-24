@@ -82,12 +82,11 @@ function translateUppercase(text: string) {
  * combined characters whenever possible.
  */
 function normalizeDiacriticals(text: string) {
-  return text.replace(/[)(\\/=|_^+]{2,}/g, function (match: string) {
-    const normalized = match.split('')
+  return text.replace(/[)(\\/=|_^+]{2,}/g, (match: string) => (
+    match.split('')
       .sort((a, b) => diacriticalPrecedence[a] - diacriticalPrecedence[b])
-      .join('');
-    return normalized;
-  });
+      .join('')
+  ));
 }
 
 /**
@@ -113,7 +112,7 @@ function translateBetaCode(text: string): string {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-  let disposable = vscode.commands.registerCommand('extension.betaCode', function () {
+  const disposable = vscode.commands.registerCommand('extension.betaCode', () => {
     const editor = vscode.window.activeTextEditor;
 
     if (editor) {
