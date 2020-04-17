@@ -1,10 +1,11 @@
 {
   "name": "betacode",
   "displayName": "BetaCode",
-  "license": "GPL-3.0",
   "description": "Type polytonic Greek into VS Code.",
   "version": "0.1.6",
   "publisher": "capatech",
+  "license": "GPL-3.0",
+  "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/kugland/vscode-extension-betacode"

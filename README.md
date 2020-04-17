@@ -8,7 +8,7 @@ Character mapping
 
 The character mapping is based on [Beta Code][beta_code].
 
-![BetaCode table](betacode.png)
+![BetaCode table](betacode-table.png)
 
 But it differs from Beta Code in that:
 
