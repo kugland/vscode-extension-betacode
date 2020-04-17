@@ -2,7 +2,7 @@
   "name": "betacode",
   "displayName": "BetaCode",
   "description": "Type polytonic Greek into VS Code.",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "publisher": "capatech",
   "license": "GPL-3.0",
   "icon": "icon.png",
