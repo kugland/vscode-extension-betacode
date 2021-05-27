@@ -49,9 +49,6 @@ jobs:
           ${{ runner.os }}-yarn-
     - name: Install dependencies in /
       run: yarn --frozen-lockfile
-    - name: Install dependencies in /webview/
-      working-directory: webview
-      run: yarn --frozen-lockfile
     - name: Build extension
       run: vsce package -o ${{ steps.utils.outputs.artifact_name }}
     - name: Upload a Build Artifact
