@@ -1,6 +1,8 @@
 VSCode-BetaCode
 ================
 
+![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/capatech.betacode)
+
 Type [polytonic Greek][polytonic] into [VS Code][vscode].
 
 Character mapping
