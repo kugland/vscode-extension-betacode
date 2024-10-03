@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@types/node": "20.11.26",
-    "@types/vscode": "1.87.0",
+    "@types/vscode": "1.94.0",
     "tslint": "5.20.1",
     "typescript": "5.4.2"
   }
