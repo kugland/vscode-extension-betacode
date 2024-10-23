@@ -39,7 +39,7 @@
     "watch": "tsc -watch -p ./"
   },
   "devDependencies": {
-    "@types/node": "20.11.26",
+    "@types/node": "20.17.0",
     "@types/vscode": "1.87.0",
     "tslint": "5.20.1",
     "typescript": "5.4.2"
