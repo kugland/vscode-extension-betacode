@@ -54,6 +54,21 @@ Becomes:
 Ἀμήν.
 ```
 
+Development
+-----------
+
+```sh
+npm install
+npm run compile   # build into out/
+npm run lint      # Biome lint + format check (npm run lint:fix to apply)
+npm test          # integration tests inside a real VS Code instance
+```
+
+`npm test` downloads the latest stable VS Code into `.vscode-test/` unless
+`VSCODE_EXECUTABLE_PATH` points at an existing VS Code (Electron) binary. On
+NixOS the downloaded build will not run, so point it at the installed one, e.g.
+`VSCODE_EXECUTABLE_PATH=$(dirname $(readlink -f $(command -v code)))/../lib/vscode/code npm test`.
+
 Credits & License
 -----------------
 VSCode-BetaCode is written by [André Kugland][kuglandml] and licensed under
