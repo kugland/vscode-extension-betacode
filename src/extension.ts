@@ -14,14 +14,12 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-
-'use strict';
-
 import * as vscode from 'vscode';
 
 /**
  * Mapping of BetaCode codes to Greek Unicode characters.
  */
+// biome-ignore format: hand-aligned table
 const betaCodeMap: Record<string, string> = {
   // Uppercase characters
   A: 'Α', B: 'Β', C: 'Ξ', D: 'Δ', E: 'Ε', F: 'Φ', G: 'Γ', H: 'Η',
@@ -55,15 +53,14 @@ const betaCodeMap: Record<string, string> = {
  * ordered by code length (needed to ensure correct translating
  * of codes with more than one character).
  */
-const betaCodeReplaces: [string, string][] = (
-  Object.keys(betaCodeMap)
-    .sort((a, b) => b.length - a.length)
-    .map(code => [code, betaCodeMap[code]])
-);
+const betaCodeReplaces: [string, string][] = Object.keys(betaCodeMap)
+  .sort((a, b) => b.length - a.length)
+  .map((code) => [code, betaCodeMap[code]]);
 
 /**
  * Precedence of diacriticals (used in normalizeDiacriticals).
  */
+// biome-ignore format: hand-aligned table
 const diacriticalPrecedence: Record<string, number> = {
   '(': 0, ')': 0, '+': 1,
   '/': 2, '\\': 2, '=': 2,
@@ -82,11 +79,12 @@ function translateUppercase(text: string) {
  * combined characters whenever possible.
  */
 function normalizeDiacriticals(text: string) {
-  return text.replace(/[)(\\/=|_^+]{2,}/g, (match: string) => (
-    match.split('')
+  return text.replace(/[)(\\/=|_^+]{2,}/g, (match: string) =>
+    match
+      .split('')
       .sort((a, b) => diacriticalPrecedence[a] - diacriticalPrecedence[b])
-      .join('')
-  ));
+      .join(''),
+  );
 }
 
 /**
@@ -119,7 +117,7 @@ export function activate(context: vscode.ExtensionContext) {
       const document = editor.document;
       const selections = editor.selections;
 
-      editor.edit(editBuilder => {
+      editor.edit((editBuilder) => {
         for (const selection of selections) {
           const text = document.getText(selection);
           const translatedText = translateBetaCode(text);
