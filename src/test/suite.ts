@@ -8,6 +8,7 @@ const cases: [string, string][] = [
   ['A)mh/n. *a)mh/n.', 'Ἀμήν. Ἀμήν.'],
   ['su/nacis su/nacij', 'σύναξις σύναξις'],
   ['a_ a^ i+ i/+ s2', 'ᾱ ᾰ ϊ ΐ ς'],
+  ['s3 S3 lo/gos3', 'ϲ Ϲ λόγοϲ'],
 ];
 
 async function translate(

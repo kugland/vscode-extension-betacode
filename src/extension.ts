@@ -104,8 +104,9 @@ function translateBetaCode(text: string): string {
   for (const [code, greek] of betaCodeReplaces) {
     result = result.split(code).join(greek);
   }
-  // Normalize the result to combined Unicode characters.
-  result = result.normalize('NFKC');
+  // Compose combining diacriticals (NFC, not NFKC: compatibility folding
+  // would turn lunate sigma into ς/Σ).
+  result = result.normalize('NFC');
   return result;
 }
 
