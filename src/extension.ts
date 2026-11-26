@@ -117,7 +117,7 @@ export function activate(context: vscode.ExtensionContext) {
       const document = editor.document;
       const selections = editor.selections;
 
-      editor.edit((editBuilder) => {
+      return editor.edit((editBuilder) => {
         for (const selection of selections) {
           const text = document.getText(selection);
           const translatedText = translateBetaCode(text);
