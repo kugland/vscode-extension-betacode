@@ -1,9 +1,19 @@
 VSCode-BetaCode
 ================
 
-![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/capatech.betacode)
+[![Open VSX Version](https://img.shields.io/open-vsx/v/kugland/betacode)][openvsx]
 
 Type [polytonic Greek][polytonic] into [VS Code][vscode].
+
+Installation
+------------
+
+The extension is published on [Open VSX][openvsx], so editors that use it
+(VSCodium, Gitpod, Eclipse Theia, …) can install it from their extensions view.
+
+For Microsoft's VS Code, download the `.vsix` from the [latest release][releases]
+and run `code --install-extension betacode-<version>.vsix`, or use
+*Extensions: Install from VSIX…* in the command palette.
 
 Character mapping
 -----------------
@@ -76,6 +86,8 @@ the [GPLv3][gplv3].
 
 [polytonic]: https://en.wikipedia.org/wiki/Greek_diacritics
 [vscode]: https://code.visualstudio.com/
+[openvsx]: https://open-vsx.org/extension/kugland/betacode
+[releases]: https://github.com/kugland/vscode-extension-betacode/releases/latest
 [beta_code]: https://en.wikipedia.org/wiki/Beta_code
 [lords_prayer]: https://en.wikipedia.org/wiki/Lord%27s_Prayer
 [kuglandml]: mailto:kugland@gmail.com

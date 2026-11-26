@@ -3,7 +3,7 @@
   "displayName": "BetaCode",
   "description": "Type polytonic Greek into VS Code.",
   "version": "0.1.10",
-  "publisher": "capatech",
+  "publisher": "kugland",
   "license": "GPL-3.0",
   "icon": "icon.png",
   "repository": {
