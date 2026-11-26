@@ -1,5 +1,22 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "description": "@types/vscode must not exceed engines.vscode; bump both together by hand.",
+      "matchPackageNames": [
+        "@types/vscode"
+      ],
+      "enabled": false
+    },
+    {
+      "description": "Keep @types/node on the Node major bundled with VS Code (Electron).",
+      "matchPackageNames": [
+        "@types/node"
+      ],
+      "allowedVersions": "<25"
+    }
   ]
 }
