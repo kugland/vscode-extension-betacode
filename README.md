@@ -79,6 +79,17 @@ npm test          # integration tests inside a real VS Code instance
 NixOS the downloaded build will not run, so point it at the installed one, e.g.
 `VSCODE_EXECUTABLE_PATH=$(dirname $(readlink -f $(command -v code)))/../lib/vscode/code npm test`.
 
+### Releasing
+
+```sh
+npm version patch        # or minor/major: bumps package.json, commits, tags
+git push --follow-tags
+```
+
+Pushing a `v*` tag runs the release workflow: it lints, tests, packages the
+`.vsix`, publishes it to Open VSX, and attaches it to a GitHub release. The
+workflow needs an Open VSX access token in the `OVSX_PAT` repository secret.
+
 Credits & License
 -----------------
 VSCode-BetaCode is written by [André Kugland][kuglandml] and licensed under
